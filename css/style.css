@@ -1,0 +1,234 @@
+@media print{
+    section#pres>ul>li.hideForPrint{
+        display:none;
+    }
+
+    small{
+        display: none;
+    }
+
+    header{
+        width: 80%;
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+
+    header>a{
+        position: absolute;
+        right: -300px;
+    }
+
+    footer{
+        display: none;
+    }
+}
+
+body{
+    overflow-x: hidden;
+}
+
+header{
+    float: left;
+}
+
+main{
+    float: right;
+}
+
+header a#photo img{
+    border-radius: 50%;
+    width: 130px;
+}
+
+header>a{
+    float: right;
+    shape-outside: circle();
+}
+
+header{
+    margin: 6vh auto;
+    background: white;
+    width: 49%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    padding: 5px 5px 0px 40px;
+    position: relative;
+    transform: translateX(-70vw);
+    transition: transform 0.7s ease-out;
+}
+
+main{
+    clear: both;
+    width: 85%;
+    margin: auto;
+}
+
+main #pres>ul>li{
+    transform: translateX(100vw);
+    transition: transform 0.7s ease-out;
+}
+
+footer{
+    clear: both;
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+footer a i{
+    background: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    padding-top: 5px;
+    color: firebrick;
+}
+
+#makeItRain{
+    vertical-align: middle !important;
+}
+
+footer a#print{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+body{
+    background: rgba(178,34,34,1);
+    background: -moz-linear-gradient(left, rgba(178,34,34,1) 0%, rgba(178,34,34,1) 15%, rgba(178,34,34,1) 18%, rgba(184,39,39,1) 35%, rgba(201,58,58,1) 66%, rgba(241,111,92,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(178,34,34,1)), color-stop(15%, rgba(178,34,34,1)), color-stop(18%, rgba(178,34,34,1)), color-stop(35%, rgba(184,39,39,1)), color-stop(66%, rgba(201,58,58,1)), color-stop(100%, rgba(241,111,92,1)));
+    background: -webkit-linear-gradient(left, rgba(178,34,34,1) 0%, rgba(178,34,34,1) 15%, rgba(178,34,34,1) 18%, rgba(184,39,39,1) 35%, rgba(201,58,58,1) 66%, rgba(241,111,92,1) 100%);
+    background: -o-linear-gradient(left, rgba(178,34,34,1) 0%, rgba(178,34,34,1) 15%, rgba(178,34,34,1) 18%, rgba(184,39,39,1) 35%, rgba(201,58,58,1) 66%, rgba(241,111,92,1) 100%);
+    background: -ms-linear-gradient(left, rgba(178,34,34,1) 0%, rgba(178,34,34,1) 15%, rgba(178,34,34,1) 18%, rgba(184,39,39,1) 35%, rgba(201,58,58,1) 66%, rgba(241,111,92,1) 100%);
+    background: linear-gradient(to right, rgba(178,34,34,1) 0%, rgba(178,34,34,1) 15%, rgba(178,34,34,1) 18%, rgba(184,39,39,1) 35%, rgba(201,58,58,1) 66%, rgba(241,111,92,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b22222', endColorstr='#f16f5c', GradientType=1 );
+    
+    font-family: 'Roboto', sans-serif;
+}
+
+header *{
+    padding: 0;
+    margin: 2px;
+}
+
+.collapsible-body{
+    background: whitesmoke;
+}
+
+#technos{
+    display: flex;
+    justify-content: space-around;
+}
+
+#technos li{
+    text-align: center;
+}
+
+section#pres ul,
+section#pres ul li div{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border: none;
+    box-shadow: none;
+    transition: transform 1.5s;
+}
+
+section#pres ul li div[class="collapsible-header"]{
+    border: 1px solid lightgray;
+}
+
+section#pres ul li div ul{
+    list-style-type: disc;
+}
+
+ul i{
+    color: rgb(69, 160, 130);
+}
+
+footer ul,
+footer ul li div{
+    border-top-left-radius: 30px !important;
+    border-bottom-left-radius: 30px !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: rgb(69, 160, 130);
+}
+
+footer ul{
+    width: 10% !important;
+    margin-left: auto !important;
+}
+
+small a img{
+    width: 15px;
+    border: 0.5px solid gray;
+}
+
+small{
+    position: absolute;
+    top: 0;
+    right: 150px;
+}
+
+#cardContent{
+    width: 100%;
+    translate: width 1s;
+}
+
+#cardContent.hide{
+    width: 0;
+}
+
+@media screen and (max-width: 1500px){
+    header{
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    header{
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    header{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    header, main{
+        width: 100%;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    header{
+        padding: 20px 20px 10px 20px;
+    }
+
+    header>a{
+        margin-left: 5px;
+    }
+
+    header small a img{
+        width: 25px;
+        height: 15px;
+    }
+
+    header small{
+        right: 40%;
+    }
+
+    main section#pres ul li div{
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
