@@ -22,7 +22,7 @@
     <link rel="icon" href="https://images.ecosia.org/PkU2gi3nBetLcKino6Am8VYKwXw=/0x390/smart/https%3A%2F%2Fbanner2.kisspng.com%2F20171127%2Ffb0%2Fpapyrus-clip-art-png-image-5a1cdb6d804cf6.5444873615118406215255.jpg">
 </head>
 <body>
-    <?php if($_GET['lang'] == "fr"): ?>
+    <?php if ($_GET['lang'] == "fr") : ?>
         <header>
             <a href="#/" id="photo"><img src="images/ppic.jpg" alt=""></a>
             <p id="cardContent">
@@ -60,7 +60,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">build</i>Technologies maîtrisées</div>
+                        <div class="collapsible-header"><i class="material-icons">build</i>Technologies</div>
                         <div class="collapsible-body">
                             <ul id="technos">
                                 <li>
@@ -131,7 +131,7 @@
         <main>
             <section id="pres">
                 <ul class="collapsible">
-                    <li class="">
+                    <li>
                         <div class="collapsible-header"><i class="material-icons">account_balance</i>Curriculum</div>
                         <div class="collapsible-body">
                             <ul>
@@ -212,89 +212,19 @@
             <a href="#" id="print"><i class="material-icons">print</i></a>
         </footer>
     <?php endif ?>
-
+    <div id="cache"></div>
+    <div id="portfolio">
+        <div class="clock">
+            <div class="clock-face">
+                <div class="hand hour-hand"></div>
+                <div class="hand min-hand"></div>
+                <div class="hand second-hand"></div>
+            </div>
+        </div>
+        <div id="clock-numeric"></div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-        // ACCORDEON
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.collapsible');
-            var instances = M.Collapsible.init(elems, {accordion: false});
-        });
-
-        // TOOLTIPS TECHNOS
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.tooltipped');
-            var instances = M.Tooltip.init(elems);
-        });
-
-        document.querySelector("#print").addEventListener("click", function(){
-            li_1.style.transform = "translateX(0)";
-            li_2.style.transform = "translateX(0)";
-            li_3.style.transform = "translateX(0)";
-            li_4.style.transform = "translateX(0)";
-            headerHidden = true;
-            hideHeader();
-            document.querySelectorAll("#pres>ul>li:not(.hideForPrint)>div").forEach(div=>div.style.display = "block");
-            window.print();
-        });
-
-        let li_1 = document.querySelector("#pres>ul>li:nth-of-type(1)");
-        let li_2 = document.querySelector("#pres>ul>li:nth-of-type(2)");
-        let li_3 = document.querySelector("#pres>ul>li:nth-of-type(3)");
-        let li_4 = document.querySelector("#pres>ul>li:nth-of-type(4)");
-        document.querySelector("#makeItRain").addEventListener("click", function(){
-            // Here it rains
-            window.scrollTo(0, 0);
-            
-            // if has_class("active") then click
-            if(li_1.classList.toString().indexOf("active") != -1) li_1.childNodes[1].click();
-            if(li_2.classList.toString().indexOf("active") != -1) li_2.childNodes[1].click();
-            if(li_3.classList.toString().indexOf("active") != -1) li_3.childNodes[1].click();
-            if(li_4.classList.toString().indexOf("active") != -1) li_4.childNodes[1].click();
-
-            i = 500;
-            Array.from(document.querySelectorAll("#pres>ul>li")).reverse().forEach(function(li){
-                setTimeout(function(){
-                    li.style.transform = "translateX(100vw)";
-                }, i);
-                i += 450;
-            });
-
-            headerHidden = false;
-            hideHeader();
-            // showPortfolio();
-        });
-
-        let headerHidden = true;
-        document.querySelector("#photo").addEventListener("click", hideHeader);
-        function hideHeader(){
-            if(!headerHidden){
-                document.querySelector("header").style.transform = "translateX(-39vw)";
-                headerHidden = true;
-            } else {
-                document.querySelector("header").style.transform = "translateX(0)";
-                headerHidden = false;
-            }
-        };
-
-        hideHeader();
-        let i = 500;
-        document.querySelectorAll("#pres>ul>li").forEach(function(li){
-            setTimeout(function(){
-                li.style.transform = "translateX(0)";
-            }, i);
-            i += 450;
-        });
-
-        let transCount = 0;
-        document.addEventListener('transitionend', function(e){
-            transCount++;
-            if(transCount == 4){  
-                setTimeout(function(){
-                    li_1.childNodes[1].click();
-                }, 800);
-            } 
-        })
-    </script>
+    <script src="js/main.js"></script>
+    <script src="js/clock.js"></script>
 </body>
 </html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- FONT AWESOME -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <!-- MATERIAL ICONS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+     <!-- MATERIALIZE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" media="only print" href="css/print.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <title>Curriculum Vitae</title>
+    <link rel="icon" href="https://image.flaticon.com/icons/svg/587/587592.svg">
+</head>
+<body>
+    <header>
+        <a href="#" id="photo"><img src="images/ppic.jpg" alt=""></a>
+        <p style="display:none"id="cardContent">
+            <h2>Nicolas Fasano</h2>
+            <h4>Développeur web</h4>
+            <em>06.23.30.91.21</em> |
+            <em>fasano.nm@gmail.com</em> |
+            <em>Permis B : NON</em> |
+            <em>Vélo : OUI</em>
+        </p>
+        <small>
+            <a href="#" id="fr"><img src="images/french_flag.png" alt=""></a>
+            <a href="#" id="en"><img src="images/uk_flag.jpg" alt=""></a>
+        </small>
+    </header>
+    <main>
+        <section id="pres">
+            <ul class="collapsible">
+                <li class="">
+                    <div class="collapsible-header"><i class="material-icons">account_balance</i>Parcours</div>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li>2015-2016: Baccalauréat ES mention bien (14.10), candidat libre (préparation CNED).</li>
+                            <li>2016-2017: Première année de droit. Obtenue (13.80).</li>
+                            <li>2017-2018: Deuxième année de droit.</li>
+                            <li>2019: Janvier à Mars - Formation développeur-intégrateur web 3WAcademy - <em>Certification RNCP niveau III (équivalent BAC+2).</em></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="hideForPrint">
+                    <div class="collapsible-header"><i class="far fa-lightbulb"></i>Expérience</div>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li>Accueil et gestion du prêt en bibliothèque universitaire : 2017-2018 à Faculté de droit de Douai, Université d'Artois.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">build</i>Technologies maîtrisées</div>
+                    <div class="collapsible-body">
+                        <ul id="technos">
+                            <li>
+                                <h4>Intégration</h4>
+                                <ul>
+                                    <li class="btn tooltipped" data-position="bottom" data-tooltip="HyperText Markup Language, version 5">HTML5</li>
+                                    <li class="btn tooltipped" data-position="bottom" data-tooltip="Cascading Style Sheets, version 3">CSS3</li>
+                                    <li class="btn tooltipped" data-position="bottom" data-tooltip="Framework front-end">Bootstrap 3</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>Javascript</h4>
+                                <ul>
+                                    <li class="btn tooltipped" data-position="bottom" data-tooltip="Normes de scripting adoptées en 2016">ES6</li>
+                                    <li class="btn tooltipped" data-position="bottom" data-tooltip="Framework Javascript">jQuery</li>
+                                    <li class="btn tooltipped" data-position="bottom" data-tooltip="Utilisation asynchrone du langage">AJAX (jQuery & native)</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>Serveur</h4>
+                                <ul>
+                                    <li class="btn tooltipped" data-position="bottom" data-tooltip="PHP, version 5">PHP 5</li>
+                                    <li class="btn tooltipped" data-position="bottom" data-tooltip="Système de gestion de bases de données">MySQL</li>
+                                    <li class="btn tooltipped" data-position="bottom" data-tooltip="Outil de gestion de bases de données">phpMyAdmin</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="hideForPrint">
+                    <div class="collapsible-header"><i class="far fa-user"></i>A propos</div>
+                    <div class="collapsible-body">
+                        <p>
+                            Né à Marseille, j'y ai effectué ma première année d'études de droit (2016-2017). La seconde, je l'ai suivie dans le Nord,
+                            à l'Université d'Artois. Mon premier contact avec le dév, c'était à travers mon cousin, qui s'est reconverti avec une formation 
+                            (WebForce, pour ne pas les nommer !). C'est par la suite que j'ai considéré cette option, alors que je m'apercevais, durant ma deuxième année, que le droit
+                            ne me convenait pas, tant comme choix de vie que comme matière à étudier. C'est pour cette raison, et pour rentrer dans la vie active,
+                            que j'ai suivi la formation 3WA.
+                        </p>
+                    </div>
+                </li>
+            </ul>   
+        </section>
+    </main>
+    <footer>
+        <ul class="collapsible">
+            <li class="hideForPrint">
+                <div class="collapsible-header" id="makeItRain"><i class="fas fa-caret-right"></i>Portfolio</div>
+            </li>
+        </ul>
+        <a href="#" id="print"><i class="material-icons">print</i></a>
+    </footer>
+</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        materializeStuff();
+
+        function materializeStuff(){
+            // ACCORDEON
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.collapsible');
+                var instances = M.Collapsible.init(elems, {accordion: false});
+            });
+
+            // TOOLTIPS TECHNOS
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.tooltipped');
+                var instances = M.Tooltip.init(elems);
+            });
+
+            document.querySelector("#print").addEventListener("click", function(){
+                li_1.style.transform = "translateX(0)";
+                li_2.style.transform = "translateX(0)";
+                li_3.style.transform = "translateX(0)";
+                li_4.style.transform = "translateX(0)";
+                headerHidden = true;
+                hideHeader();
+                document.querySelectorAll("#pres>ul>li:not(.hideForPrint)>div").forEach(div=>div.style.display = "block");
+                window.print();
+            });
+
+            let li_1 = document.querySelector("#pres>ul>li:nth-of-type(1)");
+            let li_2 = document.querySelector("#pres>ul>li:nth-of-type(2)");
+            let li_3 = document.querySelector("#pres>ul>li:nth-of-type(3)");
+            let li_4 = document.querySelector("#pres>ul>li:nth-of-type(4)");
+            document.querySelector("#makeItRain").addEventListener("click", function(){
+                // Here it rains
+                window.scrollTo(0, 0);
+                
+                // if has_class("active") then click
+                if(li_1.classList.toString().indexOf("active") != -1) li_1.childNodes[1].click();
+                if(li_2.classList.toString().indexOf("active") != -1) li_2.childNodes[1].click();
+                if(li_3.classList.toString().indexOf("active") != -1) li_3.childNodes[1].click();
+                if(li_4.classList.toString().indexOf("active") != -1) li_4.childNodes[1].click();
+
+                i = 500;
+                Array.from(document.querySelectorAll("#pres>ul>li")).reverse().forEach(function(li){
+                    setTimeout(function(){
+                        li.style.transform = "translateX(100vw)";
+                    }, i);
+                    i += 450;
+                });
+
+                headerHidden = false;
+                hideHeader();
+                // showPortfolio();
+            });
+
+            let headerHidden = true;
+            hideHeader();
+
+            document.querySelector("#photo").addEventListener("click", hideHeader);
+
+            function hideHeader(){
+                if(!headerHidden){
+                    document.querySelector("header").style.transform = "translateX(-39vw)";
+                    headerHidden = true;
+                } else {
+                    document.querySelector("header").style.transform = "translateX(0)";
+                    headerHidden = false;
+                }
+            };
+
+            let i = 500;
+            document.querySelectorAll("#pres>ul>li").forEach(function(li){
+                setTimeout(function(){
+                    li.style.transform = "translateX(0)";
+                }, i);
+                i += 450;
+            });
+
+            let transCount = 0;
+            document.addEventListener('transitionend', function(e){
+                transCount++;
+                if(transCount == 4){  
+                    setTimeout(function(){
+                        li_1.childNodes[1].click();
+                    }, 800);
+                } 
+            });
+
+            document.querySelector("#fr").addEventListener("click", function(){
+                document.body.innerHTML = `<header>
+                        <a href="#" id="photo"><img src="images/ppic.jpg" alt=""></a>
+                        <p style="display:none"id="cardContent">
+                            <h2>Nicolas Fasano</h2>
+                            <h4>Développeur web</h4>
+                            <em>06.23.30.91.21</em> |
+                            <em>fasano.nm@gmail.com</em> |
+                            <em>Permis B : NON</em> |
+                            <em>Vélo : OUI</em>
+                        </p>
+                        <small>
+                            <a href="#" id="fr"><img src="images/french_flag.png" alt=""></a>
+                            <a href="#" id="en"><img src="images/uk_flag.jpg" alt=""></a>
+                        </small>
+                    </header>
+                    <main>
+                        <section id="pres">
+                            <ul class="collapsible">
+                                <li class="">
+                                    <div class="collapsible-header"><i class="material-icons">account_balance</i>Parcours</div>
+                                    <div class="collapsible-body">
+                                        <ul>
+                                            <li>2015-2016: Baccalauréat ES mention bien (14.10), candidat libre (préparation CNED).</li>
+                                            <li>2016-2017: Première année de droit. Obtenue (13.80).</li>
+                                            <li>2017-2018: Deuxième année de droit.</li>
+                                            <li>2019: Janvier à Mars - Formation développeur-intégrateur web 3WAcademy - <em>Certification RNCP niveau III (équivalent BAC+2).</em></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="hideForPrint">
+                                    <div class="collapsible-header"><i class="far fa-lightbulb"></i>Expérience</div>
+                                    <div class="collapsible-body">
+                                        <ul>
+                                            <li>Accueil et gestion du prêt en bibliothèque universitaire : 2017-2018 à Faculté de droit de Douai, Université d'Artois.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="collapsible-header"><i class="material-icons">build</i>Technologies maîtrisées</div>
+                                    <div class="collapsible-body">
+                                        <ul id="technos">
+                                            <li>
+                                                <h4>Intégration</h4>
+                                                <ul>
+                                                    <li class="btn tooltipped" data-position="bottom" data-tooltip="HyperText Markup Language, version 5">HTML5</li>
+                                                    <li class="btn tooltipped" data-position="bottom" data-tooltip="Cascading Style Sheets, version 3">CSS3</li>
+                                                    <li class="btn tooltipped" data-position="bottom" data-tooltip="Framework front-end">Bootstrap 3</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <h4>Javascript</h4>
+                                                <ul>
+                                                    <li class="btn tooltipped" data-position="bottom" data-tooltip="Normes de scripting adoptées en 2016">ES6</li>
+                                                    <li class="btn tooltipped" data-position="bottom" data-tooltip="Framework Javascript">jQuery</li>
+                                                    <li class="btn tooltipped" data-position="bottom" data-tooltip="Utilisation asynchrone du langage">AJAX (jQuery & native)</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <h4>Serveur</h4>
+                                                <ul>
+                                                    <li class="btn tooltipped" data-position="bottom" data-tooltip="PHP, version 5">PHP 5</li>
+                                                    <li class="btn tooltipped" data-position="bottom" data-tooltip="Système de gestion de bases de données">MySQL</li>
+                                                    <li class="btn tooltipped" data-position="bottom" data-tooltip="Outil de gestion de bases de données">phpMyAdmin</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="hideForPrint">
+                                    <div class="collapsible-header"><i class="far fa-user"></i>A propos</div>
+                                    <div class="collapsible-body">
+                                        <p>
+                                            Né à Marseille, j'y ai effectué ma première année d'études de droit (2016-2017). La seconde, je l'ai suivie dans le Nord,
+                                            à l'Université d'Artois. Mon premier contact avec le dév, c'était à travers mon cousin, qui s'est reconverti avec une formation 
+                                            (WebForce, pour ne pas les nommer !). J'ai alors caressé cette option, considérant que le droit
+                                            ne me convenait pas, tant comme choix de vie que comme matière à étudier. C'est pour cette raison, et pour rentrer dans la vie active,
+                                            que j'ai suivi la formation 3WA.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>   
+                        </section>
+                    </main>
+                    <footer>
+                        <ul class="collapsible">
+                            <li class="hideForPrint">
+                                <div class="collapsible-header" id="makeItRain"><i class="fas fa-caret-right"></i>Portfolio</div>
+                            </li>
+                        </ul>
+                        <a href="#" id="print"><i class="material-icons">print</i></a>
+                    </footer>`;
+                    
+                materializeStuff();
+            });
+
+            document.querySelector("#en").addEventListener("click", function(){
+                document.body.innerHTML = `<header>
+                    <a href="#" id="photo"><img src="images/ppic.jpg" alt=""></a>
+                    <p style="display:none"id="cardContent">
+                        <h2>Nicolas Fasano</h2>
+                        <h4>Web developer</h4>
+                        <em>06.23.30.91.21</em> |
+                        <em>fasano.nm@gmail.com</em>
+                    </p>
+                    <small>
+                        <a href="#" id="fr"><img src="images/french_flag.png" alt=""></a>
+                        <a href="#" id="en"><img src="images/uk_flag.jpg" alt=""></a>
+                    </small>
+                </header>
+                <main>
+                    <section id="pres">
+                        <ul class="collapsible">
+                            <li class="">
+                                <div class="collapsible-header"><i class="material-icons">account_balance</i>Curriculum</div>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        <li>2015-2016: A-level,</li>
+                                        <li>2016-2018: Law school, 2 years,</li>
+                                        <li>2019: January through March - Web Developer training @3WAcademy - <em>State-recognized diploma (RNCP III)</em></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">build</i>Technologies</div>
+                                <div class="collapsible-body">
+                                    <ul id="technos">
+                                        <li>
+                                            <h4>Integration</h4>
+                                            <ul>
+                                                <li class="btn tooltipped" data-position="bottom" data-tooltip="HyperText Markup Language, version 5">HTML5</li>
+                                                <li class="btn tooltipped" data-position="bottom" data-tooltip="Cascading Style Sheets, version 3">CSS3</li>
+                                                <li class="btn tooltipped" data-position="bottom" data-tooltip="Front-end framework">Bootstrap 3</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h4>Javascript</h4>
+                                            <ul>
+                                                <li class="btn tooltipped" data-position="bottom" data-tooltip="Scripting standards, adopted 2016">ES6</li>
+                                                <li class="btn tooltipped" data-position="bottom" data-tooltip="Javascript framework">jQuery</li>
+                                                <li class="btn tooltipped" data-position="bottom" data-tooltip="Asynchronous Javascript and XML">AJAX (jQuery & native)</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h4>Server</h4>
+                                            <ul>
+                                                <li class="btn tooltipped" data-position="bottom" data-tooltip="PHP version 5">PHP 5</li>
+                                                <li class="btn tooltipped" data-position="bottom" data-tooltip="Database management system">MySQL</li>
+                                                <li class="btn tooltipped" data-position="bottom" data-tooltip="Database administration tool">phpMyAdmin</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hideForPrint">
+                                <div class="collapsible-header"><i class="far fa-images"></i>Portfolio</div>
+                                <div class="collapsible-body">
+                                    <p>
+                                        Coming !
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="hideForPrint">
+                                <div class="collapsible-header"><i class="far fa-user"></i>About me</div>
+                                <div class="collapsible-body">
+                                    <p>
+                                        I grew up in Marseille, France. Lived there, studied there. At seventeen, I quit highschool. 
+                                        I was quite depressed and spent the next three years of my life dwelling on the past and brooding about my non-existent future. 
+                                        At some point I got tired of waiting for something amazing to happen to me. Nothing was coming for me, 
+                                        thus I had to get back on my feet and learn to walk again.
+                                        I studied alone for the whole year, passed my A levels successfully at 22, then started to attend law at university, 
+                                        breezing through the first year and its constitutional law and law history courses only to find out in my second year that I
+                                        really didn't care about law beyond the scope of political science and history.
+                                        This was the crux of my rebirth : should I give up on two years of hard work to get into law school ? For what ? 
+                                        I wasn't ready to study five more years of another subject. I felt the urge to work and make something productive out of me,
+                                        and couldn't stand regurgitating theoretical (nonsensical) courses all year round (to law students, I'm sorry).
+                                        My cousin recently had made a U-turn in his career choices : from salesman, he'd become a web developer, following a 3-months (presential) course. 
+                                        We got around to talk about it, and long gone thoughts of computer science flooded my mind. What if ?
+                                        Here I am.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>   
+                    </section>
+                </main>
+                <footer>
+                    <ul class="collapsible">
+                        <li class="hideForPrint">
+                            <div class="collapsible-header" id="makeItRain"><i class="fas fa-caret-right"></i>Portfolio</div>
+                        </li>
+                    </ul>
+                    <a href="#" id="print"><i class="material-icons">print</i></a>
+                </footer>`;
+
+                materializeStuff();
+            });
+        }
+    </script>
+</html>
