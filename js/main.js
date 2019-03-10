@@ -1,23 +1,30 @@
 const header = new Header(document.querySelector("header"));
 const lis = new ElemCollection(document.querySelectorAll("#pres>ul>li"));
-const cache = new Elem(document.querySelector("#cache"));
+const cache = document.querySelector("#cache");
 const portfolio = new Elem(document.querySelector("#portfolio"));
 const dropdowns = document.querySelectorAll("#pres>ul>li div:last-child");
 const firstLi = document.querySelector(
   "#pres>ul>li:first-child div:first-child"
 );
+const lastLi = document.querySelector(
+  "#pres>ul>li:last-child"
+);
+const small = new Elem(document.querySelector("header small"));
 
 //
 //
 function showPortfolio() {
   window.scrollTo(0, 0);
-  dropdowns.forEach(function(div) {
-    div.style.display = "none";
-  });
+  dropdowns.forEach(div => div.style.display = "none");
   lis.hide();
   header.hide();
-  cache.show();
+  small.hide();
+  requestAnimationFrame(function(){
+    cache.style.top = "0";
+    cache.style.opacity = "1";
+  });
   setTimeout(portfolio.show, 3300);
+  clock();
 
   header.element.addEventListener("click", removePortfolio);
 }
@@ -25,13 +32,13 @@ function showPortfolio() {
 //
 //
 function removePortfolio() {
-  portfolio.hide();
-  cache.hide();
+  requestAnimationFrame(() => portfolio.hide());
+  requestAnimationFrame(() => cache.style.top = "-200vw");
+  
+  requestAnimationFrame(() => cache.style.opacity = "0");
+  small.show();
   header.show();
-  lis.show();
-  setTimeout(function() {
-    firstLi.click();
-  }, 2900);
+  lis.showQuick();
 
   header.element.removeEventListener("click", removePortfolio);
 }
@@ -41,15 +48,12 @@ function removePortfolio() {
 //
 header.show();
 lis.show();
-setTimeout(function() {
-  firstLi.click();
-}, 2900);
+lastLi.addEventListener("transitionend", () => firstLi.click(), {once: true});
+
 document.querySelector("#makeItRain").addEventListener("click", showPortfolio);
-document.querySelector("#print").addEventListener("click", function() {
-  window.print();
-});
-//
-//
+
+// PRINT BUTTON
+document.querySelector("#print").addEventListener("click", () => window.print());
 //
 
 //
@@ -59,11 +63,11 @@ document.querySelector("#print").addEventListener("click", function() {
 // DROPDOWNS
 document.addEventListener("DOMContentLoaded", function() {
   var elems = document.querySelectorAll(".collapsible");
-  var instances = M.Collapsible.init(elems, { accordion: false });
+  M.Collapsible.init(elems, { accordion: false });
 });
 
 // TOOLTIPS TECHNOS
 document.addEventListener("DOMContentLoaded", function() {
   var elems = document.querySelectorAll(".tooltipped");
-  var instances = M.Tooltip.init(elems);
+  M.Tooltip.init(elems);
 });

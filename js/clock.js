@@ -22,7 +22,7 @@ hour.style.transform = "rotate(" + hourOffset + "deg)";
 
 function clock() {
   secCount++;
-  secOffset += 6;
+  secOffset += 6;  
   sec.style.transform = "rotate(" + secOffset + "deg)";
   if (secCount == 60) {
     secCount = 0;
@@ -49,9 +49,7 @@ function clock() {
   numericClock.innerHTML =
     hourCountString + ":" + minCountString + ":" + secCountString;
 
-  setTimeout(function() {
+  setTimeout(function(){
     clock();
   }, 1000);
 }
-
-clock();

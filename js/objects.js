@@ -33,6 +33,11 @@ function ElemCollection(elements) {
       i += 450;
     });
   };
+  this.showQuick = function() {
+    this.elements.forEach(function(element) {
+        element.classList.add("reveal");
+    });
+  };
   this.hide = function() {
     let i = 500;
     Array.from(this.elements)

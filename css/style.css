@@ -20,7 +20,7 @@ header {
   border-bottom-right-radius: 80px;
   padding: 5px 5px 0px 40px;
   position: relative;
-  transform: translateX(-38vw);
+  transform: translateX(-39.5vw);
   transition: transform 0.9s ease-out;
   z-index: 11;
 }
@@ -30,7 +30,7 @@ header.reveal {
 }
 
 header.translateY {
-  transform: translate(-38vw, 50vh);
+  transform: translate(-40vw, 50vh) scale(0.85);
 }
 
 header * {
@@ -78,15 +78,9 @@ div#cache {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  top: 0;
-  display: none;
+  top: -200vh;
   opacity: 0;
   transition: opacity 4s;
-}
-
-div#cache.reveal {
-  display: block;
-  opacity: 1;
 }
 
 main #pres > ul > li {
@@ -131,7 +125,6 @@ section#pres ul li div {
   border-bottom-left-radius: 30px;
   border: none;
   box-shadow: none;
-  transition: transform 1.5s;
 }
 
 section#pres ul li div[class="collapsible-header"] {
@@ -169,14 +162,20 @@ small {
   position: absolute;
   top: 0;
   right: 150px;
+  display: none;
+}
+
+small.reveal{
+  display: block;
 }
 
 #portfolio {
-  width: 75vw;
-  height: 75vh;
+  width: 75%;
+  height: 75%;
   position: absolute;
-  top: -76vh;
-  left: 12.5vw;
+  transform: translateY(-275%);
+  top: 12.5%;
+  left: 12.5%;
   z-index: 11;
   /* background: url(https://i.ytimg.com/vi/gD4uACwPChA/maxresdefault.jpg); */
   background-size: cover;
@@ -186,7 +185,7 @@ small {
 }
 
 #portfolio.reveal {
-  transform: translateY(87.5vh);
+  transform: translateY(0%);
 }
 
 #clock-numeric {
@@ -224,11 +223,11 @@ header > a {
 }
 
 .clock {
-  width: 400px;
-  height: 400px;
-  border: 20px solid white;
+  width: 250px;
+  height: 250px;
+  border: 10px solid white;
   border-radius: 50%;
-  margin: 50px auto;
+  margin: 30px auto;
   position: relative;
   padding: 2rem;
   box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
@@ -247,7 +246,7 @@ header > a {
   height: 5px;
   background: black;
   position: absolute;
-  top: 50%;
+  top: 51%;
   transform-origin: right;
 }
 
@@ -255,6 +254,8 @@ header > a {
   transition: transform 1s;
   width: 35%;
   left: 16.5%;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 
 .min-hand {
@@ -262,22 +263,24 @@ header > a {
   height: 4px;
   width: 45%;
   left: 6%;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 
 .second-hand {
   transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   height: 3px;
-  left: 1.5%;
+  left: 1.56%;
 }
 
 .centerpoint {
   background: black;
   border-radius: 50%;
   position: absolute;
-  top: 48.5%;
+  top: 47.5%;
   width: 14px;
   height: 14px;
-  left: 49%;
+  left: 47.5%;
 }
 
 /* _____ _        _            
@@ -374,6 +377,10 @@ header > a {
     border-top-left-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
+  }
+
+  footer{
+    display: none;
   }
 
   #technos {
