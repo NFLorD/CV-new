@@ -379,6 +379,18 @@ header > a {
     border-bottom-left-radius: 0;
   }
 
+  #technos{
+    flex-direction: column;
+  }
+  
+  #technos>li+li{
+    margin: 15px auto;
+  }
+
+  #technos li ul li{
+    margin-top: 8px;
+  }
+
   footer{
     display: none;
   }
